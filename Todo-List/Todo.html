@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="Todo.css">
+    <script src="https://kit.fontawesome.com/31ed776dd6.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Todo-List</title>
+</head>
+<body style="background-color:#352f5b;">
+
+    <div class="container col-lg-4"> <!--this is a bootstrap class which keeps everything within a central column-->
+
+         <header class="text-center text-light my-4"> <!--has a class of text-center to centralize the text, text-light to make the text look light-->
+            <h1 class="mb-4"><b>Todo List</b></h1><!--Has a class of marginButton  of strength 4-->
+            <form class="search">
+                <input type="text" class="form-control m-auto" name="search" placeholder="search todos"/>
+            </form>
+         </header>
+
+         <div class="List">
+            <ul class="text-center list-group todos mx-auto text-light ">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span>Play MarioKart</span>
+                    <i class="fa-solid fa-trash delete"></i>
+                </li>
+    
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span>Work on your Database assignment</span>
+                    <i class="fa-solid fa-trash delete"></i>
+                </li>
+    
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span>Revise your Cloud-Computing Lectures</span>
+                    <i class="fa-solid fa-trash delete"></i>
+                </li>
+    
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span>Do some Sport Exercises</span>
+                    <i class="fa-solid fa-trash delete"></i>
+                </li>
+    
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span>Do your Laundry</span>
+                    <i class="fa-solid fa-trash delete"></i>
+                </li>
+             </ul>
+         </div>
+<!--The Use of i-tag is for font Awesome, when ever you want to use a font awesome symbol, you use an i-tag and 
+then we give the class of what ever symbol we want -->
+
+<!-- Here lies the form at the bottom to add a new todo-->
+<form class="add text-center my-4">
+    <label class="text-light">Add a New Task...</label>
+    <input type="text" name="addTodo" class="add-todo form-control m-auto"/>
+</form>
+    </div>
+    
+
+    <script defer src="Todo.js"></script>
+</body>
+</html>
