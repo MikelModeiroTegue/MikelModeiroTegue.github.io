@@ -42,3 +42,7 @@ form.add label {
         font-size: 18px;
     }
 }
+
+.hide-item{
+    display: none !important;
+}

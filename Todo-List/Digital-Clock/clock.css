@@ -1,0 +1,21 @@
+body{
+    background: #333;
+}
+
+.clock{
+    font-size: 5rem;
+    text-align: center;
+    margin: 200px auto;
+    color: yellow;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.clock span{
+    padding: 20px;
+    background: #444;
+}
+
+.clock span.day{
+display: block;
+background: #333;
+}

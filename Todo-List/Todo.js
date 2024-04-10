@@ -52,3 +52,27 @@ list.addEventListener('click', e=>{
         e.target.parentElement.remove();
      }
 });
+
+
+
+// the Search Feature by listerning to keyUps and firing a callBack function on each
+
+
+// here is a function defined to take the term of input and match against the to do list, filtering the unmatching ones 
+const filteringTodo= (term)=>{
+    // get the list of to do used to perform the matching later 
+Array.from(list.children).filter((todo)=>!todo.textContent.includes(term)).forEach(todo=>todo.classList.add('hide-item'))
+
+// if a class was added to a todo, and later maybe the input was changed, the class will still remain added to that Li element even if with the new input term there's a match 
+// so to solve this constraint, 
+Array.from(list.children).filter((todo)=>todo.textContent.includes(term)).forEach(todo=>todo.classList.remove('hide-item'))
+}
+
+const userInput=document.querySelector('.input-field');
+userInput.addEventListener('keyup', ()=>{
+    let term=userInput.value.trim();
+    filteringTodo(term);
+})
+
+
+
