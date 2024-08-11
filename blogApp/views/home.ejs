@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+        <%- include('./partials/nav.ejs') %>
+    <div class="blogs content">
+        <h2>All Blogs</h2>
+        <div>
+            <% for (let i=0; i < result.length ; i++){ %>
+              <a class="single" href="/blogs/<%= result[i]._id %>"><h3>
+                <%= result[i].title %>
+            </h3>
+            <p>
+                <%= result[i].snippet %>
+            </p>
+            <p>
+                <%= result[i].body %>
+            </p></a>
+                        
+                    <% } %>
+        </div>
+    </div>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>
